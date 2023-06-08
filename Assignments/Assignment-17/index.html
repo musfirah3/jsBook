@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Assignment -17</h2>
+  <!-- Question:1 -->
+  <!-- Create a signup form and display form data in your web page on submission. -->
+  <h3>1-Sign Up Form</h3>
+  <div class="container">
+
+    <form id="signupForm" onsubmit="login(event)">
+      <div class="mb-3">
+        <label for="exampleInputName1" class="form-label">User name</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+
+      <input type="submit" value="Submit" class="btn btn-primary mb-5">
+    </form>
+    <div id="output"></div>
+  </div>
+
+
+  <!-- Question:2 -->
+  <!-- Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read nmore” button, full detail of that particular item will be displayed -->
+  <h4>2- Read More Details</h4>
+
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card mt-3">
+        <img
+          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/render-1607537697.jpeg?crop=0.670xw:1.00xh;0.167xw,0&resize=1200:*"
+          class="card-img-top object-fit-contain" style="width: 45rem; height:20rem;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Land Cruiser</h5>
+          <p class="card-text">Over 60 years of Glory The Legend Forges Ahead The Kind of the Road
+
+          </p>
+          <a href="#" class="btn btn-primary" id="offline" onclick="readmore()">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="https://www.focus2move.com/wp-content/uploads/2020/08/Toyota-Hilux-2021-1024-0d.jpg"
+          class="card-img-top object-fit-contain" style="width: 45rem; height:20rem;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Revo Rocco</h5>
+          <p class="card-text">Power That Moves You</p>
+          <a href="#" class="btn btn-primary" id="offlineRevo" onclick="clickMe()">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="https://pictures.dealer.com/a/autonationdrive/0003/f9346112e183b3382ea7eb6c77d4340fx.jpg?impolicy=downsize&w=568"
+          class="card-img-top object-fit-contain" style="width: 45rem; height:20rem;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Sonata</h5>
+          <p class="card-text">Over 60 years of Glory The Legend Forges Ahead The Kind of the Road
+
+          </p>
+          <a href="#" class="btn btn-primary" id="offlineSonata" onclick="readMore()">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="https://pictures.dealer.com/a/autonationdrive/0464/688238e48acf342a93f7853ed9dc6914x.jpg?impolicy=downsize&w=568"
+          class="card-img-top object-fit-contain" style="width: 45rem; height:20rem;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Honda Civic RS</h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary" id="offlineCivic" onclick="detalis()">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Question:3
+Create a form which takes student’s details and show each student detail in table.
+Each row of table must contain a delete button and an edit button. On click on delete button entire row should be deleted. On click on edit button, a hidden form will appear with the values of that row. -->
+  <section>
+    <div class="container">
+      <h3>3-Form which takes student's details and show each student detail in table.</h3>
+      <div class="container m-5">
+        <form id="student-form">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Your name please">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputName1" class="form-label">Father Name</label>
+              <input type="text" class="form-control" id="FName" placeholder="Father name here">
+            </div>
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Issued by institute">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <p>Gender</p>
+          <div class="mb-3 form-check form-check-inline">
+
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+            <label class="form-check-label" for="exampleRadios1">
+              Male
+            </label>
+          </div>
+          <div class="mb-3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="Radios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Female
+            </label>
+          </div>
+          <p>Course applied for</p>
+          <div class="mb-3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="Radios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Mern Stack
+            </label>
+          </div>
+          <div class="mb-3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="Radios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Digital Marketing
+            </label>
+          </div>
+          <div class="mb-3 form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="Radios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Amazon
+            </label>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+<div class="container">
+  <table id="student-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Coures Applied for</th>
+        <th>Email Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="student-table-body">
+    </tbody>
+  </table>
+</div>
+
+
+<div class="container">
+  <form class="d-none" id="edit-form">
+    <h4>Edit Student</h4>
+    <input type="hidden" id="edit-row-index">
+  <div class="mb-3">
+    <label for="InputEmail" class="form-label">Email address</label>
+    <input type="text" class="form-control" id="edit-email">
+
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="edit-name">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Save</button>
+  <button type="button" class="btn btn-primary" id="cancel-edit">Cancel</button>
+</form>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="./app.js">
+  </script>
+</body>
+
+</html>

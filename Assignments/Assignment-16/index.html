@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Assignment-16</h2>
+    <!-- Question:1 -->
+    <!-- Show an alert box on click on a link. -->
+
+    <h3>1-Alert box on click on a link.</h3>
+    <a href="#" onClick="alert('Hello');">Click Me</a>
+
+    <!-- Question:2 -->
+    <!-- Display some Mobile images in browser. On click on an image Show the message in alert to user.-->
+    <h3>2-Mobile Phone look up</h3>
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+    <img src="https://cdn.shopify.com/s/files/1/0077/5513/7083/products/bafcd28d-598b-40f2-8ea8-9bfd48566de8_200x.jpg?v=1622046133" style="margin: 34px; border: 1px solid blueviolet;" onClick="alert('Thanks for purchasing phone from us');">
+    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/reno6pro-5g-oversea/listpage/Phone-List-Page-product-list-Black-427-x-600.png.thumb.webp" style="height: 200px;width: 150px;margin: 34px; padding: 10px; border: 1px solid blueviolet;" alt=""onClick="alert('Thanks for purchasing phone from us');">
+    <img src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1661261753630/d6ba199119ab0b14951986dcecf88587.png" style="height: 200px; width: 200px; border: 1px solid blueviolet; margin: 34px;" alt=""onClick="alert('Thanks for purchasing phone from us');">
+    <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/navigation/f15/F15-navigation-Black-v2.png.thumb.webp" style="height: 200px; width: 100px;margin: 34px; border: 1px solid blueviolet;padding: 10px;" alt=""onClick="alert('Thanks for purchasing phone from us');">
+</div>
+    
+
+<!-- Question:3 -->
+<!-- Display 10 student records in table and each row should contain a delete button. If you click on a button to delete a record, entire row should be deleted. -->
+<h3>3-Display 10 students record in table.</h3>
+<table align='center' cellspacing=2 cellpadding=5 border="1px">
+    <thead>
+        <th>Index</th>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Button</th>
+    </thead>
+    <tbody>
+        <tr id="row0">
+            <td>0</td>
+            <td>Musfirah</td>
+            <td>10</td>
+            <td><button  onclick="deleteRow('0')">Delete</button></td>
+        </tr>
+        <tr id="row1">
+            <td>1</td>
+            <td>Mushtaq</td>
+            <td>10</td>
+            <td><button  onclick="deleteRow('1')">Delete</button></td>
+        </tr>
+        <tr id="row2">
+            <td>2</td>
+            <td>Waseem</td>
+            <td>10</td>
+            <td><button  onclick="deleteRow('2')">Delete</button></td>
+        </tr>
+        <tr id="row3">
+            <td>3</td>
+            <td>Saniya</td>
+            <td>10</td>
+            <td><button  onclick="deleteRow('3')">Delete</button></td>
+        </tr>
+        <tr id="row4">
+            <td>4</td>
+            <td>Sumbul</td>
+            <td>10</td>
+            <td><button  onclick="deleteRow('4')">Delete</button></td>
+        </tr>
+        <tr id="row5">
+            <td>5</td>
+            <td>Maliha</td>
+            <td>10</td>
+            <td><button onclick="deleteRow('5')">Delete</button></td>
+        </tr>
+        <tr id="row6">
+            <td>6</td>
+            <td>Ali</td>
+            <td>10</td>
+            <td><button onclick="deleteRow('6')">Delete</button></td>
+        </tr>
+        <tr id="row7">
+            <td>7</td>
+            <td>Musfirah</td>
+            <td>10</td>
+            <td><button onclick="deleteRow('7')">Delete</button></td>
+        </tr>
+        <tr id="row8">
+            <td>8</td>
+            <td>Bilal</td>
+            <td>10</td>
+            <td><button onclick="deleteRow('8')">Delete</button></td>
+        </tr>
+        <tr id="row9">
+            <td>9</td>
+            <td>Burhan</td>
+            <td>10</td>
+            <td><button onclick="deleteRow('9')">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+   
+<!-- Question:4 -->
+<!-- Display an image in browser. Change the picture on mouseover and set the first picture on mouseout. -->
+
+<h3>4-Change picture</h3>
+<div class="container" style="display: flex;justify-content: center; align-items: center;">
+    <img src="https://images4.alphacoders.com/101/1013845.jpg" style="height: 300px; width: 450px;" onmouseover="src='https:w0.peakpx.com/wallpaper/345/406/HD-wallpaper-rose-dark-flower-red.jpg'" onmouseout="src='https:images4.alphacoders.com/101/1013845.jpg'">
+</div>
+
+<!-- Question:5 -->
+<!-- Show a counter in browser. Counter should increase on click on increase button and decrease on click on decrease button. And show updated counter value in browser. -->
+<h3>5-Counter</h3>
+<div class="container" style="display: flex; justify-content: space-evenly; align-items: center;">
+    <div id="increaseBtn" onclick="increaseFun()">
+        <input type="button" value="Increase"style="padding: 10px; background-color: cyan; border:none; border-radius: 4px;"> 
+     </div>
+    <div id="counter">
+  <input type="text">  0
+</div>
+
+<div id="decreaseBtn" onclick="decreaseFun()">
+   <input type="button" value="Decrease" style="padding: 10px; background-color: cyan; border:none; border-radius: 4px;" > </div>
+</div>
+    <script src="./app.js">
+    </script>
+</body>
+
+</html>
